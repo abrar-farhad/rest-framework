@@ -33,6 +33,8 @@ urlpatterns = [
    path("choice_generics/", ChoiceCreate_generics.as_view(), name="Choice_using_generics"),
    path("vote_generics/", CreateVote_generics.as_view(), name="Vote_using_generics"),
    path("choice_optimized/<int:pk>", ChoiceList_Optimized.as_view(), name="Choice_Optimized"),
-   path("poll/<int:poll_pk>/choice/<int:choice_pk>/vote/", CreateVote_Optimized.as_view(), name="Create_Vote_Optimized")
+   path("poll/<int:poll_pk>/choice/<int:choice_pk>/vote/", CreateVote_Optimized.as_view(), name="Create_Vote_Optimized"),
+   path("users/", UserCreate.as_view(), name="User_Create_Generics_List_Create"),
+   path("login/", LoginView.as_view(), name="login"),
 
 ]
